@@ -36,7 +36,7 @@ The `Reset` button should clear the purchased status from all items, allowing th
 
 ### Tips for Teams
 
-- Remember to use branches and GitHub Pull-Requests. Make sure to protect your `master` branch as you setup the project.
+- Remember to use branches and GitHub Pull-Requests. Make sure to protect your `main` branch as you setup the project.
 
 - Plan your database structure as a group, making sure that you consider all of your required features.
 
