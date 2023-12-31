@@ -4,7 +4,7 @@
   "description": "Group Full Stack React Shopping List",
   "proxy": "http://localhost:5001",
   "scripts": {
-    "start": "vite",
+    "start": "node server/server.js | vite",
     "client": "vite",
     "server": "nodemon --watch server server/server.js",
     "test": "vitest",
