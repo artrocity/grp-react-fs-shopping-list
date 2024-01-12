@@ -13,9 +13,9 @@ Isn't it just the worst when you come back from grocery shopping only to realize
 1. [ X ] - Create the Database
           Name varchar(80), Quantity, Unit varchar(20), Purchased (Boolean)
 2. [ X ] - Create the Pool.js to link database
-3. [  ] - Create the server.js
-4. [  ] - Create the shopping-routes.js
-          [  ] - Get Route (Items should initially appear alphabetically)
+3. [ X ] - Create the server.js
+4. [ X ] - Create the shopping-routes.js
+          [ X ] - Get Route (Items should initially appear alphabetically)
           [  ] - Post Route
 
 ## Requirements
