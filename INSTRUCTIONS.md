@@ -10,13 +10,34 @@ Isn't it just the worst when you come back from grocery shopping only to realize
 - *Node
 
 ### Task List
+SQL
 1. [ X ] - Create the Database
           Name varchar(80), Quantity, Unit varchar(20), Purchased (Boolean)
-2. [ X ] - Create the Pool.js to link database
-3. [ X ] - Create the server.js
-4. [ X ] - Create the shopping-routes.js
+
+SERVER
+1. [ X ] - Create the Pool.js to link database
+2. [ X ] - Create the server.js
+3. [ X ] - Create the shopping-routes.js
           [ X ] - Get Route (Items should initially appear alphabetically)
-          [  ] - Post Route
+          [ X ] - Post Route
+
+FRONT END
+1. [  ] - Add a Form Div
+            [  ] -Inputs for item, quantity, and unit
+            [  ] -Button to submit
+2. [  ] - Add a Shopping Div
+            [  ] -Two Buttons, one to reset the list and one to clear the list
+            [  ] -Add each shopping item to its own individual card
+                Each card should be a div, which contains
+                    [  ] -The name and unit and quantity combined
+                    [  ] -A button to buy and remove 
+
+<!-- FUTURE -->
+1. [  ] - When the page first loads, all the existing items should be displayed with the quantity & unit combined together for display.
+2. [  ] - Each item should also have an option to remove it from the list or mark it as purchased.
+3. [  ] - Once purchased, the buttons should be hidden and the item should show as "Purchased". 
+
+
 
 ## Requirements
 
