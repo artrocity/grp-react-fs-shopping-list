@@ -29,16 +29,17 @@ FRONT END
 1. [ X ] - Add a Form Div
    [ X ] -Inputs for item, quantity, and unit
    [ X ] -Button to submit
+
 2. [ X ] - Add a Shopping Div
-   [ ] -Two Buttons, one to reset the list and one to clear the list
-   [ ] -Add each shopping item to its own individual card
+   [ X ] - Two Buttons, one to reset the list and one to clear the list
+   [ X ] - Add each shopping item to its own individual card
    Each card should be a div, which contains
-   [ ] -The name and unit and quantity combined
-   [ ] -A button to buy and remove
+   [ ] - The name and unit and quantity combined
+   [ ] - A button to buy and remove
 
 <!-- FUTURE -->
 
-1. [ ] - When the page first loads, all the existing items should be displayed with the quantity & unit combined together for display.
+1. [ X ] - When the page first loads, all the existing items should be displayed with the quantity & unit combined together for display.
 2. [ ] - Each item should also have an option to remove it from the list or mark it as purchased.
 3. [ ] - Once purchased, the buttons should be hidden and the item should show as "Purchased".
 

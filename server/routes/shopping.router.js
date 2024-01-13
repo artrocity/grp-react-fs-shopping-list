@@ -51,7 +51,7 @@ router.post('/', (req, res) => {
     
 // })
 
-router.delete('/api/shopping', (req, res) => {
+router.delete('/', (req, res) => {
     // Make our DB Query
     const dbQuery = 'DELETE FROM shopping;';
 

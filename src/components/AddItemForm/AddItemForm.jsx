@@ -1,9 +1,10 @@
 // Import Modules
 import { useState } from "react";
 import axios from 'axios';
+import ShoppingSection from '../ShoppingSection/ShoppingSection';
 
 // Create a Function to add a shopping item
-function AddItemForm(props) {
+function AddItemForm() {
     const [nameValue, setNameValue] = useState('');
     const [quantityValue, setQuantityValue] = useState('');
     const [unitValue, setUnitValue] = useState('');
@@ -32,8 +33,6 @@ function AddItemForm(props) {
         axios.post('/api/shopping', newShoppingItem)
         .then((response) => {
             // on success fetchData
-
-            // props.creatureRefreshCallback();
 
             // Clear the form fields
             setNameValue('');

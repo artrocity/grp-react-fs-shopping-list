@@ -13,6 +13,7 @@ function ShoppingSection () {
 
     // Create a function to make a get request to fetch the data
     const fetchList = () => {
+
         return axios.get('/api/shopping')
         .then((response) => {
             // Print out server data
@@ -27,10 +28,29 @@ function ShoppingSection () {
         })
     };
 
+    // Function to reset all items in list to a purchased status of False
+    const resetPurchasedStatus = () => {
+        console.log("Hi");
+    }
+
+    // Function to clear (delete) all items from the database
+    const deleteAllItems = () => {
+        // Make query
+        return axios.delete('/api/shopping')
+        .then((response) => {
+            fetchList()
+        })
+        .catch((error) => {
+            console.error("Error Deleting data - Delete - : ", error);
+        })
+    }
+
     // Return JSX to APP
     return (
         <>
             <h1>Shopping List: </h1>
+            <button onClick={deleteAllItems}>Clear Shopping List</button>
+            <button onClick={resetPurchasedStatus}>Reset Purchased Status</button>
             {shoppingList.length === 0 && <p>No Shopping Items Found</p>}
             <ul className="list-group">
 

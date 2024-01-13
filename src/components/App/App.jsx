@@ -6,6 +6,7 @@ import AddItemForm from '../AddItemForm/AddItemForm.jsx';
 import ShoppingSection from '../ShoppingSection/ShoppingSection.jsx'
 
 function App() {
+
     return (
         <div className="App">
             <Header />
