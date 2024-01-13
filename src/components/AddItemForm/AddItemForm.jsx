@@ -32,7 +32,7 @@ function AddItemForm(props) {
         axios.post('/api/shopping', newShoppingItem)
         .then((response) => {
             // on success fetchData
-            
+
             // props.creatureRefreshCallback();
 
             // Clear the form fields
@@ -88,4 +88,5 @@ function AddItemForm(props) {
         );
 }
 
+// Export The Add Item Form
 export default AddItemForm;

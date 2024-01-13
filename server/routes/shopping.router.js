@@ -47,5 +47,24 @@ router.post('/', (req, res) => {
         });
 });
 
+// router.put('/reset-list', (req, res) => {
+    
+// })
+
+router.delete('/api/shopping', (req, res) => {
+    // Make our DB Query
+    const dbQuery = 'DELETE FROM shopping;';
+
+    //Manage Connections
+    pool
+        .query(dbQuery)
+        .then((result) => {
+            res.status(200).send("All Itmes deleted from the database");
+        })
+        .catch((error) => {
+            console.error("Error deleting items from the database: ", error);
+        });
+});
+
 // Export Router
 module.exports = router;

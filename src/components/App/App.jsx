@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../Header/Header.jsx'
 import './App.css';
 import AddItemForm from '../AddItemForm/AddItemForm.jsx';
+import ShoppingSection from '../ShoppingSection/ShoppingSection.jsx'
 
 function App() {
     return (
@@ -10,7 +11,7 @@ function App() {
             <Header />
             <main>
                 <AddItemForm />
-                <p>Under Construction...</p>
+                <ShoppingSection />
             </main>
         </div>
     );
