@@ -45,6 +45,16 @@ function ShoppingSection () {
         })
     }
 
+    const deleteSingleItem = (itemID) => {
+        return axios.delete(`/api/shopping/${itemID}`)
+        .then((response) => {
+            fetchList()
+        })
+        .catch((error) => {
+            console.error("Error deleting single item: ", error);
+        })
+    }
+
     // Return JSX to APP
     return (
         <>
@@ -65,7 +75,10 @@ function ShoppingSection () {
                     <tr key={item.id}>
                         <td>{item.name}</td>
                         <td>{item.quantity} {item.unit}</td>
-                        <td><button className="btn btn-secondary">Remove Item</button></td>
+                        <td><button 
+                            className="btn btn-secondary"
+                            onClick={() => deleteSingleItem(item.id)}
+                        >Remove Item</button></td>
 
                     </tr>
                     ))}
