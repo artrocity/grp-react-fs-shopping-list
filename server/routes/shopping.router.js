@@ -66,5 +66,22 @@ router.delete('/', (req, res) => {
         });
 });
 
+router.delete('/:id', (req, res) => {
+    const itemID = req.params.id
+
+    // Make our DB Query
+    const dbQuery = 'DELETE FROM shopping WHERE id = $1;';
+
+    //Manage Connections
+    pool
+        .query(dbQuery, [itemID])
+        .then((result) => {
+            res.status(200).send("Item was deleted from the database");
+        })
+        .catch((error) => {
+            console.error("Error deleting items from the database: ", error);
+        });
+});
+
 // Export Router
 module.exports = router;

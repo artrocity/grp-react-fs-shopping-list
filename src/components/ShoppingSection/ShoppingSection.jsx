@@ -52,15 +52,25 @@ function ShoppingSection () {
             <button onClick={deleteAllItems}>Clear Shopping List</button>
             <button onClick={resetPurchasedStatus}>Reset Purchased Status</button>
             {shoppingList.length === 0 && <p>No Shopping Items Found</p>}
-            <ul className="list-group">
+            <table className="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {shoppingList.map((item) => (
+                    <tr key={item.id}>
+                        <td>{item.name}</td>
+                        <td>{item.quantity} {item.unit}</td>
+                        <td><button className="btn btn-secondary">Remove Item</button></td>
 
-                {shoppingList.map((item) => (
-                    <li className="list-group-item" key={item.id}>
-                        <p>{item.name} {item.quantity} {item.unit}</p>
-                    </li>
-                ))}
-
-            </ul>
+                    </tr>
+                    ))}
+                </tbody>
+            </table>
         </>
     );
 }

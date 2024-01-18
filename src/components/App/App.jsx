@@ -4,6 +4,7 @@ import Header from '../Header/Header.jsx'
 import './App.css';
 import AddItemForm from '../AddItemForm/AddItemForm.jsx';
 import ShoppingSection from '../ShoppingSection/ShoppingSection.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
