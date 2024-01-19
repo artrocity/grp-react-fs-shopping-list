@@ -34,8 +34,8 @@ FRONT END
    [ X ] - Two Buttons, one to reset the list and one to clear the list
    [ X ] - Add each shopping item to its own individual card
    Each card should be a div, which contains
-   [ ] - The name and unit and quantity combined
-   [ ] - A button to buy and remove
+   [ X ] - The name and unit and quantity combined
+   [ X ] - A button to buy and remove
 
 <!-- FUTURE -->
 

@@ -1,6 +1,7 @@
 // Import Modules
 import { useState, useEffect } from "react";
 import axios from 'axios';
+import './ShoppingSection.css';
 
 // Create a function to handle the 
 function ShoppingSection () {
@@ -82,17 +83,20 @@ function ShoppingSection () {
                 </thead>
                 <tbody>
                     {shoppingList.map((item) => (
-                    <tr key={item.id}>
+                    <tr key={item.id} className={item.purchased ? "purchased-item" : ""}>
                         <td>{item.name}</td>
                         <td>{item.quantity} {item.unit}</td>
                         <td><button 
                             className="btn btn-secondary mx-1"
                             onClick={() => deleteSingleItem(item.id)}
                         >Remove Item</button>
+                        {!item.purchased && (
                         <button 
                             className="btn btn-secondary"
                             onClick={() => purchaseItem(item.id)}
-                        >Purchase Item</button></td>
+                        >Purchase Item</button>
+                        )}
+                        </td>
                     </tr>
                     ))}
                 </tbody>
