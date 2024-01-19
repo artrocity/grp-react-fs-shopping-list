@@ -55,12 +55,22 @@ function ShoppingSection () {
         })
     }
 
+    const purchaseItem = (itemID) => {
+        return axios.put(`/api/shopping/${itemID}`)
+        .then((response) => {
+            fetchList()
+        })
+        .catch((error) => {
+            console.error("Error deleting single item: ", error);
+        })
+    }
+
     // Return JSX to APP
     return (
         <>
             <h1>Shopping List: </h1>
-            <button onClick={deleteAllItems}>Clear Shopping List</button>
-            <button onClick={resetPurchasedStatus}>Reset Purchased Status</button>
+            <button className="btn btn-danger mx-1" onClick={deleteAllItems}>Clear Shopping List</button>
+            <button className="btn btn-warning mx-1" onClick={resetPurchasedStatus}>Reset Purchased Status</button>
             {shoppingList.length === 0 && <p>No Shopping Items Found</p>}
             <table className="table table-striped table-hover">
                 <thead>
@@ -76,10 +86,13 @@ function ShoppingSection () {
                         <td>{item.name}</td>
                         <td>{item.quantity} {item.unit}</td>
                         <td><button 
-                            className="btn btn-secondary"
+                            className="btn btn-secondary mx-1"
                             onClick={() => deleteSingleItem(item.id)}
-                        >Remove Item</button></td>
-
+                        >Remove Item</button>
+                        <button 
+                            className="btn btn-secondary"
+                            onClick={() => purchaseItem(item.id)}
+                        >Purchase Item</button></td>
                     </tr>
                     ))}
                 </tbody>

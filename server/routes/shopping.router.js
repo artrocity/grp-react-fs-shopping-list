@@ -51,6 +51,7 @@ router.post('/', (req, res) => {
     
 // })
 
+// DELETE ROUTE TO DELETE ALL ITEMS
 router.delete('/', (req, res) => {
     // Make our DB Query
     const dbQuery = 'DELETE FROM shopping;';
@@ -66,6 +67,7 @@ router.delete('/', (req, res) => {
         });
 });
 
+// DELETE ROUTE TO DELETE SINGLE ITEM
 router.delete('/:id', (req, res) => {
     const itemID = req.params.id
 
@@ -82,6 +84,24 @@ router.delete('/:id', (req, res) => {
             console.error("Error deleting items from the database: ", error);
         });
 });
+
+// PUT ROUTE TO MARK ITEM AS PURCHASED
+router.put("/:id", (req, res) => {
+    const itemID = req.params.id
+
+    const dbQuery = `UPDATE shopping
+                    SET purchased = true
+                    WHERE id = $1;`;
+
+    pool
+        .query(dbQuery, [itemID])
+        .then((result) => {
+            res.status(200).send("Item was marked as purchased");
+        })
+        .catch((error) => {
+            console.error("Error marking item as purchased in the database: ", error);
+        });
+})
 
 // Export Router
 module.exports = router;
