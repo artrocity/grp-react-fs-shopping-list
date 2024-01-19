@@ -40,8 +40,8 @@ FRONT END
 <!-- FUTURE -->
 
 1. [ X ] - When the page first loads, all the existing items should be displayed with the quantity & unit combined together for display.
-2. [ ] - Each item should also have an option to remove it from the list or mark it as purchased.
-3. [ ] - Once purchased, the buttons should be hidden and the item should show as "Purchased".
+2. [ X ] - Each item should also have an option to remove it from the list or mark it as purchased.
+3. [ X ] - Once purchased, the buttons should be hidden and the item should show as "Purchased".
 
 ## Requirements
 
@@ -77,7 +77,7 @@ The `Reset` button should clear the purchased status from all items, allowing th
 
 - [ X ] - Plan to break down the UI (user interface) into smaller components. Discussing this upfront as a team is very helpful as you start to discuss tasks.
 
-- [ ] - Consider the naming for routes while planning to make sure everyone has the same expecations. Note the url in the tasks.
+- [ X ] - Consider the naming for routes while planning to make sure everyone has the same expecations. Note the url in the tasks.
 
 - **Don't** have team members work _only_ on client or _only_ on server code. Everyone needs to practice working with both sides. One option is to break features out as slices that include both the client and server code. Another is to create separate tasks for client and server code, but plan so that all team members get both a client task and a server task, even if they are for different features.
 

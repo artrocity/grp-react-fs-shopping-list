@@ -78,6 +78,7 @@ function ShoppingSection () {
                     <tr>
                         <th>Item Name</th>
                         <th>Quantity</th>
+                        <th>Purchased</th>
                         <th>Options</th>
                     </tr>
                 </thead>
@@ -86,6 +87,7 @@ function ShoppingSection () {
                     <tr key={item.id} className={item.purchased ? "purchased-item" : ""}>
                         <td>{item.name}</td>
                         <td>{item.quantity} {item.unit}</td>
+                        <td>{item.purchased ? "Purchased" : ""}</td>
                         <td><button 
                             className="btn btn-secondary mx-1"
                             onClick={() => deleteSingleItem(item.id)}
