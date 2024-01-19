@@ -47,10 +47,6 @@ router.post('/', (req, res) => {
         });
 });
 
-// router.put('/reset-list', (req, res) => {
-    
-// })
-
 // DELETE ROUTE TO DELETE ALL ITEMS
 router.delete('/', (req, res) => {
     // Make our DB Query
@@ -95,6 +91,21 @@ router.put("/:id", (req, res) => {
 
     pool
         .query(dbQuery, [itemID])
+        .then((result) => {
+            res.status(200).send("Item was marked as purchased");
+        })
+        .catch((error) => {
+            console.error("Error marking item as purchased in the database: ", error);
+        });
+})
+
+// PUT ROUTE TO MARK ITEM AS PURCHASED
+router.put("/", (req, res) => {
+
+    const dbQuery = `UPDATE shopping SET purchased = false;`;
+
+    pool
+        .query(dbQuery)
         .then((result) => {
             res.status(200).send("Item was marked as purchased");
         })

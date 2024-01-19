@@ -16,54 +16,62 @@ function ShoppingSection () {
     const fetchList = () => {
 
         return axios.get('/api/shopping')
-        .then((response) => {
-            // Print out server data
-            console.log("Server Data: ", response);
+            .then((response) => {
+                // Print out server data
+                console.log("Server Data: ", response);
 
-            // Assign response.data to shopping list
-            setShoppingList(response.data)
-            console.log("Shopping List Data: ", response.data);
-        })
-        .catch((error) => {
-            console.error("Error Fetching data - GET - : ", error);
-        })
+                // Assign response.data to shopping list
+                setShoppingList(response.data)
+                console.log("Shopping List Data: ", response.data);
+            })
+            .catch((error) => {
+                console.error("Error Fetching data - GET - : ", error);
+            })
     };
-
-    // Function to reset all items in list to a purchased status of False
-    const resetPurchasedStatus = () => {
-        console.log("Hi");
-    }
 
     // Function to clear (delete) all items from the database
     const deleteAllItems = () => {
         // Make query
         return axios.delete('/api/shopping')
-        .then((response) => {
-            fetchList()
-        })
-        .catch((error) => {
-            console.error("Error Deleting data - Delete - : ", error);
-        })
+            .then((response) => {
+                fetchList()
+            })
+            .catch((error) => {
+                console.error("Error Deleting data - Delete - : ", error);
+            })
     }
 
+    // Function to delete a single item
     const deleteSingleItem = (itemID) => {
         return axios.delete(`/api/shopping/${itemID}`)
-        .then((response) => {
-            fetchList()
-        })
-        .catch((error) => {
-            console.error("Error deleting single item: ", error);
-        })
+            .then((response) => {
+                fetchList()
+            })
+            .catch((error) => {
+                console.error("Error deleting single item: ", error);
+            });
     }
 
+    // Function to purchase a single item
     const purchaseItem = (itemID) => {
         return axios.put(`/api/shopping/${itemID}`)
-        .then((response) => {
-            fetchList()
-        })
-        .catch((error) => {
-            console.error("Error deleting single item: ", error);
-        })
+            .then((response) => {
+                fetchList()
+            })
+            .catch((error) => {
+                console.error("Error deleting single item: ", error);
+            });
+    };
+
+    // Function to reset the purchased status of all items to false
+    const resetPurchasedStatus = () => {
+        return axios.put('/api/shopping')
+            .then((response) => {
+                fetchList()
+            })
+            .catch((error) => {
+                console.error("Error deleting single item: ", error);
+            });
     }
 
     // Return JSX to APP
