@@ -104,3 +104,49 @@ The `Reset` button should clear the purchased status from all items, allowing th
 - Currently, if you typo something, it must be removed and re-added to fix it. An edit feature would be a great enhancement. Add an `Edit` button which will have the existing data show in the input form at the top of the page to allow an easier edit.
 
   > Hint: For the edit, add a boolean indicator to the component state to indicate if the item is in view or edit mode.
+
+## Part 3:
+
+Using your code from last week:
+
+- [ ] Add all members of your group to a single GitHub repository and give them write access.
+- [ ] Install Material UI before you start feature branching.
+- [ ] Plan out your tasks so that each person is working in a separate component (e.g. task for styling the form, list, list item, header & footer).
+- [ ] Each member of your group should create at least one feature branch and one pull request.
+
+## Whitebaord Questions
+
+Word Counter
+Prompt:
+
+Write a function that takes in two arguments, an array of strings and a string. The function should return the number of times the string is found in the array.
+
+Example clarifying questions:
+
+Will they always be array of strings and a string? Yes.
+May I use built in methods like .toLowercase()? Yes
+Will the array always have strings? It may be empty, if it is, return 0.
+Does capitalization matter? No. You may assume all characters are lowercase.
+Example test cases:
+
+["apple", "pizza", "orange", "apple", "sour apple"], "apple" -> 2
+["apple", "pizza", "orange", "apple", "sour apple"], "pizza" -> 1
+["apple", "pizza", "orange", "apple", "sour apple"], "sour" -> 0
+["sour", "soiree", "Sour", "sour", "sour"], "sour" -> 3
+[], "banana" -> 0
+
+Add Up the Numbers
+Prompt:
+
+Write a function that takes in a number. Return the sum of all the numbers from the first number passed in to the second number you passed in. For example, if we pass in 1 and 4, we'd return 1 + 2 + 3 + 4 = 10.
+
+Example clarifying questions:
+
+Can the number passed in be negative? No.
+Can the number be zero? No.
+Will it always be a number? Yes.
+Example test cases:
+
+addItUp(1, 4) -> 10
+addItUp(2, 6) -> 20
+addItUp(10,11) -> 21
