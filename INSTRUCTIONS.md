@@ -109,8 +109,8 @@ The `Reset` button should clear the purchased status from all items, allowing th
 
 Using your code from last week:
 
-- [ ] Add all members of your group to a single GitHub repository and give them write access.
-- [ ] Install Material UI before you start feature branching.
+- [ X ] Add all members of your group to a single GitHub repository and give them write access.
+- [ X ] Install Material UI before you start feature branching.
 - [ ] Plan out your tasks so that each person is working in a separate component (e.g. task for styling the form, list, list item, header & footer).
 - [ ] Each member of your group should create at least one feature branch and one pull request.
 
